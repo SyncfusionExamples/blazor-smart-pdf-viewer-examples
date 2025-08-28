@@ -23,7 +23,7 @@ public class Program
         builder.Services.AddSyncfusionBlazor();
 
         string azureOpenAiKey = "enter-your-key";
-        string azureOpenAiEndpoint = "https://openai-165589.openai.azure.com/";
+        string azureOpenAiEndpoint = "enter - your - endpoint";
         string azureOpenAiModel = "gpt-4o-mini";
         AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
         IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
