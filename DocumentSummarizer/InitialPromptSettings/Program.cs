@@ -24,7 +24,7 @@ public class Program
 
         string azureOpenAiKey = "enter-your-key";
         string azureOpenAiEndpoint = "enter - your - endpoint";
-        string azureOpenAiModel = "gpt-4o-mini";
+        string azureOpenAiModel = "enter-your-model-name";
         AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
         IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
         builder.Services.AddChatClient(azureOpenAiChatClient);
