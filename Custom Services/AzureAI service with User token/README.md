@@ -1,5 +1,5 @@
-# UserToken with Azure AI service in SmartPdfViewer
-This example shows how to integrate usertoken with Azure AI service in SmartPdfViewer.
+# UserToken with Azure AI service in Smart PDF Viewer
+This example shows how to integrate usertoken with Azure AI service in Smart PDF Viewer.
 Documentation: https://help.syncfusion.com/document-processing/pdf/Smart-PDF-Viewer/blazor/how-to/User-Token-with-Custom-AI-service
 
 # Project pre-requisites

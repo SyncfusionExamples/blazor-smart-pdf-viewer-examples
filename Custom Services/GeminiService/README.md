@@ -1,5 +1,5 @@
-# Integrate the Gemini Service in SmartPdfViewer
-This example shows how to integrate Gemini Service in SmartPdfViewer.
+# Integrate the Gemini Service in Smart PDF Viewer
+This example shows how to integrate Gemini Service in Smart PDF Viewer.
 Documentation: https://help.syncfusion.com/document-processing/pdf/Smart-PDF-Viewer/blazor/gemini-service
 
 # Project pre-requisites
