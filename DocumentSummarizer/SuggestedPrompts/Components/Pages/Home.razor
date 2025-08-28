@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    <AssistViewSettings>
+        <InitialPromptSettings SuggestedPrompts="@CustomSuggestions" />
+    </AssistViewSettings>
+</SfSmartPdfViewer>
+
+@code {
+    string[] CustomSuggestions = new[] {
+        "What is the main purpose of this document?",
+        "Generate a quick overview for a meeting briefing.",
+        "Is there any legal or compliance information here?",
+    };
+}

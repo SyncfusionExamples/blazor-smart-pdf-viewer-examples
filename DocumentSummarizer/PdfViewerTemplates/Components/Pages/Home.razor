@@ -1,0 +1,28 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.InteractiveChat;
+
+<SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    <AssistViewSettings>
+        <PdfViewerTemplates>
+            <PromptTemplate>
+                <PromptToolbar>
+                    <PromptToolbarItem IconCss="e-icons e-assist-edit"></PromptToolbarItem>
+                    <PromptToolbarItem IconCss="e-icons e-assist-copy"></PromptToolbarItem>
+                </PromptToolbar>
+            </PromptTemplate>
+            <ResponseTemplate>
+                <ResponseToolbar>
+                    <ResponseToolbarItem IconCss="e-icons e-assist-like"></ResponseToolbarItem>
+                    <ResponseToolbarItem IconCss="e-icons e-assist-dislike"></ResponseToolbarItem>
+                </ResponseToolbar>
+            </ResponseTemplate>
+            <BannerTemplate>
+                <div style="font-size: 16px; color:#5D3FD3;">
+                    Welcome to Syncfusion’s AI-powered PDF Summarizer!<br />
+                    Extract key ideas and save time with smart summaries.
+                </div>
+            </BannerTemplate>
+        </PdfViewerTemplates>
+    </AssistViewSettings>
+</SfSmartPdfViewer>
