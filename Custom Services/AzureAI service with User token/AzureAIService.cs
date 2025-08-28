@@ -48,7 +48,7 @@ namespace Azure_AI_service_sample
                     };
                 }
                 chatParameters.MaxTokens = outputTokens;
-                var completion = await GenerateResponseAsync(chatParameters);
+                string completion = await GenerateResponseAsync(chatParameters);
                 if (appendPreviousResponse)
                 {
                     chatParameters_history?.Messages?.Add(new ChatMessage(ChatRole.Assistant, completion));
@@ -74,7 +74,7 @@ namespace Azure_AI_service_sample
                 return null;
             }
             // Create a completion request with the provided parameters
-            var completionRequest = new ChatOptions
+            ChatOptions completionRequest = new ChatOptions
             {
                 Temperature = options.Temperature ?? 0.5f,
                 TopP = options.TopP ?? 1.0f,
