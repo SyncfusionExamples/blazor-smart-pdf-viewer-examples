@@ -1,11 +1,11 @@
 using Azure.AI.OpenAI;
-using GettingStartedWeb.Components;
+using GettingStarted.Components;
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
-namespace GettingStartedWeb;
+namespace GettingStarted;
 
 public class Program
 {
@@ -22,9 +22,9 @@ public class Program
         builder.Services.AddMemoryCache();
         builder.Services.AddSyncfusionBlazor();
 
-        string apiKey = "api-key";
-        string deploymentName = "deployment-name";
-        string endpoint = "endpoint URL";
+        string apiKey = "C5PujTMQv71JwaQsthRcGNxopR78M5SbftbOQxN2oALxDN0bBSBrJQQJ99BHACYeBjFXJ3w3AAABACOGgpDM";
+        string deploymentName = "gpt-4o-mini";
+        string endpoint = "https://openai-165589.openai.azure.com/";
 
         string azureOpenAiKey = apiKey;
         string azureOpenAiEndpoint = endpoint;
