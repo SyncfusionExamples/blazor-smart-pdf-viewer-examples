@@ -31,7 +31,7 @@ builder.Services.AddChatClient(azureOpenAIChatClient);
 builder.Services.AddScoped<UserTokenService>();
 builder.Services.AddScoped<IChatInferenceService, AzureAIService>(sp =>
 {
-    var userTokenService = sp.GetRequiredService<UserTokenService>();
+    UserTokenService userTokenService = sp.GetRequiredService<UserTokenService>();
     return new AzureAIService(userTokenService, azureOpenAIChatClient);
 });
 builder.Services.AddSyncfusionBlazor();

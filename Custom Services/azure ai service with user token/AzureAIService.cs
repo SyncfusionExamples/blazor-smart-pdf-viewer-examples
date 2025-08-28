@@ -26,7 +26,7 @@ namespace Azure_AI_service_sample
         /// <returns>The AI-generated completion as a string.</returns>
         public async Task<string> GetCompletionAsync(string prompt, bool returnAsJson = true, bool appendPreviousResponse = false, string systemRole = null, int outputTokens = 2000)
         {
-            string systemMessage = returnAsJson ? "You are a helpful assistant that only returns and replies with valid, iterable RFC8259 compliant JSON in your responses unless I ask for any other format. Do not provide introductory words such as 'Here is your result' or '```json', etc. in the response" : !string.IsNullOrEmpty(systemRole) ? systemRole : "You are a helpful assistant";
+            string systemMessage = returnAsJson ? "You are a helpful assistant that only returns and replies with valid, iterable RFC8259 compliant JSON in your responses unless I ask for any other format. Do not provide introductory words such as 'Here is your result' or 'json', etc. in the response" : !string.IsNullOrEmpty(systemRole) ? systemRole : "You are a helpful assistant";
             try
             {
                 ChatParameters chatParameters = appendPreviousResponse ? chatParameters_history : new ChatParameters();
@@ -35,20 +35,20 @@ namespace Azure_AI_service_sample
                     if (chatParameters.Messages == null)
                     {
                         chatParameters.Messages = new List<ChatMessage>() {
-                            new ChatMessage(ChatRole.System,systemMessage),
-                        };
+                         new ChatMessage(ChatRole.System,systemMessage),
+                     };
                     }
                     chatParameters.Messages.Add(new ChatMessage(ChatRole.User, prompt));
                 }
                 else
                 {
                     chatParameters.Messages = new List<ChatMessage>(2) {
-                        new ChatMessage (ChatRole.System, systemMessage),
-                        new ChatMessage(ChatRole.User,prompt),
-                    };
+                     new ChatMessage (ChatRole.System, systemMessage),
+                     new ChatMessage(ChatRole.User,prompt),
+                 };
                 }
                 chatParameters.MaxTokens = outputTokens;
-                var completion = await GenerateResponseAsync(chatParameters);
+                string completion = await GenerateResponseAsync(chatParameters);
                 if (appendPreviousResponse)
                 {
                     chatParameters_history?.Messages?.Add(new ChatMessage(ChatRole.Assistant, completion));
@@ -74,7 +74,7 @@ namespace Azure_AI_service_sample
                 return null;
             }
             // Create a completion request with the provided parameters
-            var completionRequest = new ChatOptions
+            ChatOptions completionRequest = new ChatOptions
             {
                 Temperature = options.Temperature ?? 0.5f,
                 TopP = options.TopP ?? 1.0f,
@@ -95,5 +95,6 @@ namespace Azure_AI_service_sample
             }
         }
     }
+
 }
 
