@@ -18,7 +18,7 @@ namespace Azure_AI_service_sample
         [HttpGet("get_remaining_tokens/{userId}")]
         public async Task<IActionResult> GetRemainingTokens(string userId)
         {
-            var filePath = Path.Combine(_env.ContentRootPath, "user_tokens.json");
+            string filePath = Path.Combine(_env.ContentRootPath, "user_tokens.json");
             int remainingTokens = await userToken.GetRemainingTokensAsync(userId);
             string alertMessage = await userToken.ReturnAlertMessage(userId);
             if (remainingTokens <= 300)
