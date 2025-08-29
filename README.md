@@ -1,12 +1,12 @@
-# Syncfusion Blazor Smart PDF Viewer Examples
+# Syncfusion® Blazor Smart PDF Viewer Examples
 
-This repository contains comprehensive examples and samples for the **Syncfusion Blazor Smart PDF Viewer** - an AI-powered PDF viewing and processing component that enhances document handling with intelligent features. The Smart PDF Viewer leverages advanced AI technologies to provide document summarization, smart form filling, and intelligent redaction capabilities.
+This repository contains comprehensive examples and samples for the **Syncfusion® Blazor Smart PDF Viewer** - an AI-powered PDF viewing and processing component that enhances document handling with intelligent features. The Smart PDF Viewer leverages advanced AI technologies to provide document summarization, smart form filling, and intelligent redaction capabilities.
 
-![Syncfusion Smart PDF Viewer](./Getting%20Started/GettingStarted/wwwroot/images/smart-pdf-viewer.png)
+![Syncfusion® Smart PDF Viewer](./images/smart-pdf-viewer.png)
 
 ## Key AI-Powered Features in Smart PDF Viewer
 
-The Syncfusion Blazor Smart PDF Viewer incorporates three powerful AI-driven features that revolutionize document processing:
+The Syncfusion® Blazor Smart PDF Viewer incorporates three powerful AI-driven features that revolutionize document processing:
 
 ### AI-Powered Document Summarization and Interactive Q&A
 
@@ -17,7 +17,7 @@ Advanced AI capabilities for intelligent document analysis and content understan
 - Multi-language support for global document processing workflows
 - Smart content categorization and automated topic identification
 
-![Document Summarization Demo](./Getting%20Started/GettingStarted/wwwroot/images/document-summarizer.gif)
+![Document Summarization Demo](./images/document-summarizer.gif)
 
 ### Intelligent Document Redaction and Privacy Protection
 AI-powered redaction system that intelligently identifies and protects sensitive information:
@@ -27,14 +27,14 @@ AI-powered redaction system that intelligently identifies and protects sensitive
 - Customizable redaction patterns and industry-specific compliance rules
 - Batch redaction capabilities for processing multiple documents efficiently
 
-![Smart Redaction Demo](./Getting%20Started/GettingStarted/wwwroot/images/smart-redaction.gif)
+![Smart Redaction Demo](./images/smart-redaction.gif)
 
 ### AI-Enhanced Smart Form Filling and Data Extraction
 Intelligent form filling system with advanced data extraction and field mapping capabilities:
 - Extract relevant information from clipboard content, documents, or structured data sources
 - Intelligently map extracted data to appropriate form fields with high accuracy
 
-![Smart Fill Demo](./Getting%20Started/GettingStarted/wwwroot/images/smart-fill.gif)
+![Smart Fill Demo](./images/smart-fill.gif)
 
 ## Configuration and Setup Instructions
 
@@ -119,8 +119,7 @@ The repository provides comprehensive examples for integrating various AI servic
 - **Google Gemini AI**: Advanced multimodal AI processing with superior language understanding and document analysis
 - **Groq AI Infrastructure**: High-performance AI inference with specialized hardware acceleration for real-time applications
 
-
-### Official Documentation
+## Official Documentation
 
 This table provides a comprehensive overview of all the Smart PDF Viewer AI features and samples in this repository, along with links to their respective documentation site for detailed implementation guidance and documentation.
 
@@ -160,3 +159,27 @@ This table provides a comprehensive overview of all the Smart PDF Viewer AI feat
         </tr>
     </tbody>
 </table>
+
+## Support and feedback
+
+* For any other queries, reach our [Syncfusion® support team](https://www.syncfusion.com/support/directtrac/incidents/newincident) or post the queries through the [Community forums](https://www.syncfusion.com/forums) and submit a feature request or a bug through our [Feedback portal](https://www.syncfusion.com/feedback).
+* To renew the subscription, click [renew](https://www.syncfusion.com/sales/products) or contact our sales team at salessupport@syncfusion.com | Toll Free: 1-888-9 DOTNET.
+
+## License
+
+Syncfusion JavaScript / Blazor Components is available under the Syncfusion Essential Studio program, and can be licensed either under the Syncfusion Community License Program or the Syncfusion commercial license.
+
+To be qualified for the Syncfusion Community License Program, you must have gross revenue of less than one (1) million U.S. dollars (USD 1,000,000.00) per year and have less than five (5) developers in your organization, and agree to be bound by Syncfusion’s terms and conditions.
+
+Customers who do not qualify for the community license can contact sales@syncfusion.com for commercial licensing options.
+
+You may not use this product without first purchasing a Community License or a Commercial License, as well as agreeing to and complying with Syncfusion's license terms and conditions.
+
+The Syncfusion® license that contains the terms and conditions can be found at
+[https://www.syncfusion.com/content/downloads/syncfusion_license.pdf](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf)
+
+## About Syncfusion
+
+Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion® has more than 29,000 customers and more than 1 million users, including large financial institutions, Fortune 500 companies, and global IT consultancies.
+
+Today we provide 1,800+ controls and frameworks for web ([ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls), [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls), [ASP.NET WebForms](https://www.syncfusion.com/jquery/aspnet-web-forms-ui-controls), [JavaScript](https://www.syncfusion.com/javascript-ui-controls), [Angular](https://www.syncfusion.com/angular-ui-components), [React](https://www.syncfusion.com/react-ui-components), [Vue](https://www.syncfusion.com/vue-ui-components), and [Blazor](https://www.syncfusion.com/blazor-components), mobile ([Xamarin](https://www.syncfusion.com/xamarin-ui-controls), [Flutter](https://www.syncfusion.com/flutter-widgets), [UWP](https://www.syncfusion.com/uwp-ui-controls), and [JavaScript](https://www.syncfusion.com/javascript-ui-controls)), and desktop development ([WinForms](https://www.syncfusion.com/winforms-ui-controls), [WPF](https://www.syncfusion.com/wpf-ui-controls), and [UWP](https://www.syncfusion.com/uwp-ui-controls) and [WinUI](https://www.syncfusion.com/winui-controls))). We provide ready-to deploy enterprise software for dashboards, reports, data integration, and big data processing. Many customers have saved millions in licensing fees by deploying our software.
