@@ -9,7 +9,7 @@ namespace CustomAIService
     {
         private const string ApiKey = "Your API key";
         private const string ModelName = "Your Model Name";
-        private const string Endpoint = "https://api.groq.com/openai/v1/chat/completions";
+        private const string Endpoint = "Your End Point";
 
         private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
         {
