@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    <SmartRedactSettings Enable="true" RedactPatterns="@redactPatterns"></SmartRedactSettings>
+</SfSmartPdfViewer>
+@code {
+    string[] redactPatterns = new string[] {
+        "Company Name",
+        "Amount",
+        "Languages"
+    };
+}
