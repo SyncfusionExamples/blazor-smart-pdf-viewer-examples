@@ -1,10 +1,16 @@
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
 using SmartRedaction.Components;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
+
+builder.Services.AddMemoryCache();
+builder.Services.AddSyncfusionBlazor();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

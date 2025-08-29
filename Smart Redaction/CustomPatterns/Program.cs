@@ -1,6 +1,7 @@
 using Azure.AI.OpenAI;
 using CustomPatterns.Components;
 using Microsoft.Extensions.AI;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
@@ -9,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
+
+builder.Services.AddMemoryCache();
+builder.Services.AddSyncfusionBlazor();
 
 string azureOpenAiKey = "enter-your-key";
 string azureOpenAiEndpoint = "enter-your-end-point";
