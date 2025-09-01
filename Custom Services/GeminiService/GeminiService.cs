@@ -9,6 +9,12 @@ namespace CustomService
 {
     public class GeminiService
     {
+        public event Action OnDialogOpen;
+        public string DialogMessage { get; private set; }
+        private void RaiseDialogOpen()
+        {
+            OnDialogOpen?.Invoke();
+        }
         // HTTP client configuration for optimal performance
         private static readonly Version _httpVersion = HttpVersion.Version30;
         private static readonly HttpClient HttpClient = new HttpClient(new SocketsHttpHandler
@@ -66,7 +72,9 @@ namespace CustomService
             }
             catch (Exception ex) when (ex is HttpRequestException or JsonException)
             {
-                throw new InvalidOperationException("Gemini API error.", ex);
+                DialogMessage = ex.Message; // Set the value
+                RaiseDialogOpen();
+                return "";
             }
         }
 

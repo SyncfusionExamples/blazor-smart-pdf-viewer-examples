@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using Syncfusion.Blazor.Popups
+@inject SfDialogService DialogService
 
 @using Syncfusion.Blazor.SmartPdfViewer
 <div>
@@ -6,4 +8,27 @@
     </SfSmartPdfViewer>
 </div>
 
+<style>
+    .e-dialog .e-lib .e-alert-dialog .e-dlg-modal .e-popup .e-control .e-popup-open {
+        height: 160px !important;
+    }
+
+    .e-dialog .e-footer-content {
+        padding: 5px;
+    }
+
+    .e-dialog .e-dlg-content {
+        align-content: center;
+        padding: 15px;
+        height: 80px;
+    }
+
+    .e-dlg-content {
+        height: 50px;
+    }
+
+    .e-dialog .e-footer-content{
+        padding: 10 !important;
+    }
+</style>
 

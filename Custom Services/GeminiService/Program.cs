@@ -1,7 +1,8 @@
-using CustomService.Components;
 using CustomService;
+using CustomService.Components;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
+using Syncfusion.Blazor.Popups;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.AddSyncfusionBlazor();
 
 builder.Services.AddSingleton<GeminiService>();
 builder.Services.AddSingleton<IChatInferenceService, CustomAIService>();
+builder.Services.AddScoped<SfDialogService>();
 
 var app = builder.Build();
 
