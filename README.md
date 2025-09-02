@@ -76,13 +76,13 @@ The `deploymentName` should be the [model](https://platform.openai.com/docs/mode
 
 ### Step 1: Repository Setup
 ```bash
-git clone https://github.com/syncfusion/blazor-smart-pdf-viewer-examples.git
+git clone https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples.git
 cd blazor-smart-pdf-viewer-examples
 ```
 
 ### Step 2: Choose and Navigate to a Sample
 ```bash
-cd "Getting Started/GettingStarted"
+cd GettingStarted
 ```
 
 ### Step 3: Configure AI Service Credentials
