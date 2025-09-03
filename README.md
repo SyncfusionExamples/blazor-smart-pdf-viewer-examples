@@ -1,38 +1,43 @@
 # Syncfusion® Blazor Smart PDF Viewer Examples
 
-This repository contains comprehensive examples and samples for the **Syncfusion® Blazor Smart PDF Viewer** - an AI-powered PDF viewing and processing component that enhances document handling with intelligent features. The Smart PDF Viewer leverages advanced AI technologies to provide document summarization, smart form filling, and intelligent redaction capabilities.
+This repository contains implementation examples for the **Syncfusion® Blazor Smart PDF Viewer** - an AI-enhanced PDF component that extends conventional PDF viewing capabilities with intelligent document processing. The component integrates advanced AI technologies to deliver Document Summarization with interactive Q&A, Smart Redaction for sensitive content protection, and Smart Fill for automated form completion, providing developers with tools to create more efficient and secure document management solutions.
 
 ![Syncfusion® Smart PDF Viewer](./images/smart-pdf-viewer.png)
 
 ## Key AI-Powered Features in Smart PDF Viewer
 
-The Syncfusion® Blazor Smart PDF Viewer incorporates three powerful AI-driven features that revolutionize document processing:
+The Syncfusion® Blazor AI-Powered PDF Viewer incorporates three powerful AI-driven features:
+- AI Assistance
+- Smart Redaction
+- Smart Fill
+
 
 ### AI-Powered Document Summarization and Interactive Q&A
 
-Advanced AI capabilities for intelligent document analysis and content understanding:
-- Intelligent content extraction and semantic analysis using advanced NLP models
-- Context-aware document summarization with key insights highlighting
-- Interactive Q&A functionality enabling conversational document exploration
-- Multi-language support for global document processing workflows
-- Smart content categorization and automated topic identification
+This feature leverages advanced AI to deliver intelligent document analysis and deeper content understanding. Highlights include:
+
+- **Easy Understanding**: Automatically analyzes PDF content and helps users grasp key points quickly without reading the entire document.
+- **Interactive Q&A**: Allows users to ask custom questions or choose from AI-suggested queries for deeper insights.
+- **Ideal for Complex Documents**: Perfect for legal contracts, research papers, business reports, and other lengthy or technical PDFs.
 
 ![Document Summarization Demo](./images/document-summarizer.gif)
 
 ### Intelligent Document Redaction and Privacy Protection
-AI-powered redaction system that intelligently identifies and protects sensitive information:
-- Automatic detection of PII (Personally Identifiable Information) including SSN, emails, phone numbers
-- Custom pattern recognition for domain-specific sensitive data (medical records, financial information)
-- Smart context analysis for accurate redaction without over-blocking important content
-- Customizable redaction patterns and industry-specific compliance rules
-- Batch redaction capabilities for processing multiple documents efficiently
+The AI-Powered PDF Viewer includes an AI-powered redaction system that intelligently identifies and safeguards sensitive information. Key capabilities:
+
+- **PII Data Detection**: Automatically identifies Personally Identifiable Information such as Social Security Numbers, email addresses, and phone numbers.
+- **Customizable Redaction Patterns**: Supports domain-specific data recognition for medical records, financial details and other industry-specific compliance needs.
+- **Consistent Redaction**: Ensures secure and uniform redaction across all documents to maintain privacy and regulatory standards.
 
 ![Smart Redaction Demo](./images/smart-redaction.gif)
 
 ### AI-Enhanced Smart Form Filling and Data Extraction
-Intelligent form filling system with advanced data extraction and field mapping capabilities:
-- Extract relevant information from clipboard content, documents, or structured data sources
-- Intelligently map extracted data to appropriate form fields with high accuracy
+This feature streamlines data entry using AI. Key benefits:
+
+- **Clipboard Data Extraction**: Automatically extracts relevant information from clipboard content copied from any document or structured data source.
+- **Intelligent Field Mapping**: Accurately assigns extracted data to the appropriate form fields using AI.
+- **Efficient Data Entry**: Reduces manual input while improving accuracy and overall form-filling speed.
+
 
 ![Smart Fill Demo](./images/smart-fill.gif)
 
@@ -76,13 +81,13 @@ The `deploymentName` should be the [model](https://platform.openai.com/docs/mode
 
 ### Step 1: Repository Setup
 ```bash
-git clone https://github.com/syncfusion/blazor-smart-pdf-viewer-examples.git
+git clone https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples.git
 cd blazor-smart-pdf-viewer-examples
 ```
 
 ### Step 2: Choose and Navigate to a Sample
 ```bash
-cd "Getting Started/GettingStarted"
+cd GettingStarted
 ```
 
 ### Step 3: Configure AI Service Credentials
@@ -109,7 +114,6 @@ dotnet run
 - **API Key Issues**: Verify your API key is valid and has sufficient quota
 - **Network Connectivity**: Ensure stable internet connection for AI service calls
 - **Port Conflicts**: Use `dotnet run --urls="https://localhost:5555"` for custom ports
-
 
 ## Multi-Platform AI Service Integration and Optimization
 The repository provides comprehensive examples for integrating various AI service providers with optimized configurations:
