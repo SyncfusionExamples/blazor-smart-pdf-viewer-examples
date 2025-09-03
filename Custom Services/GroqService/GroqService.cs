@@ -7,6 +7,12 @@ namespace CustomAIService
 {
     public class GroqService
     {
+        public event Action OnDialogOpen;
+        public string DialogMessage { get; private set; }
+        private void RaiseDialogOpen()
+        {
+            OnDialogOpen?.Invoke();
+        }
         private const string ApiKey = "Your API key";
         private const string ModelName = "Your Model Name";
         private const string Endpoint = "https://api.groq.com/openai/v1/chat/completions";
@@ -59,9 +65,11 @@ namespace CustomAIService
 
                 return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from model.";
             }
-            catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
+            catch (Exception ex)
             {
-                throw new InvalidOperationException("Failed to communicate with Groq API.", ex);
+                DialogMessage = ex.Message; // Set the value
+                RaiseDialogOpen();
+                return "";
             }
         }
     }

@@ -1,6 +1,7 @@
 using CustomAIService.Components;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
+using Syncfusion.Blazor.Popups;
 
 namespace CustomAIService;
 
@@ -18,7 +19,7 @@ public class Program
 
         builder.Services.AddMemoryCache();
         builder.Services.AddSyncfusionBlazor();
-
+        builder.Services.AddScoped<SfDialogService>();
         builder.Services.AddSingleton<GroqService>();
         builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
