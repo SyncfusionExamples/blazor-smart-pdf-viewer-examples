@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Popups;
 
-namespace CustomService.Components.Pages
+namespace CustomAIService.Components.Pages
 {
     public partial class Home : IDisposable
     {
         [Inject]
-        public ErrorDialogService? GeminiService { get; set; }
-
-        private string? DialogText { get; set; }
+        public ErrorDialogService? ErrorDialogService { get; set; }
 
         [Inject]
         public SfDialogService? DialogService { get; set; }
 
+        private string? DialogText { get; set; }
+
         public async void OpenDialog()
         {
-            DialogText = GeminiService!.DialogMessage;
+            DialogText = ErrorDialogService!.DialogMessage;
             int fontSize = 16; // px
             int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
             int baseWidth = 48; // Common addition to width
@@ -38,13 +38,15 @@ namespace CustomService.Components.Pages
                 Height = height
             });
         }
+
         protected override void OnInitialized()
         {
-            GeminiService!.OnDialogOpen += OpenDialog;
+            ErrorDialogService!.OnDialogOpen += OpenDialog;
         }
+
         public void Dispose()
         {
-            GeminiService!.OnDialogOpen -= OpenDialog;
+            ErrorDialogService!.OnDialogOpen -= OpenDialog;
         }
     }
 }

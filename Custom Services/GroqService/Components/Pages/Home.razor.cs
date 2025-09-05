@@ -3,16 +3,19 @@ using Syncfusion.Blazor.Popups;
 
 namespace CustomAIService.Components.Pages
 {
-    public partial class Home
+    public partial class Home : IDisposable
     {
         [Inject]
-        public GroqService? GroqService { get; set; }
+        public ErrorDialogService? ErrorDialogService { get; set; }
+
+        [Inject]
+        public SfDialogService? DialogService { get; set; }
 
         private string? DialogText { get; set; }
 
         public async void OpenDialog()
         {
-            DialogText = GroqService!.DialogMessage;
+            DialogText = ErrorDialogService!.DialogMessage;
             int fontSize = 16; // px
             int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
             int baseWidth = 48; // Common addition to width
@@ -37,11 +40,12 @@ namespace CustomAIService.Components.Pages
         }
         protected override void OnInitialized()
         {
-            GroqService!.OnDialogOpen += OpenDialog;
+            ErrorDialogService!.OnDialogOpen += OpenDialog;
         }
+
         public void Dispose()
         {
-            GroqService!.OnDialogOpen -= OpenDialog;
+            ErrorDialogService!.OnDialogOpen -= OpenDialog;
         }
     }
 }

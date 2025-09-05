@@ -1,4 +1,7 @@
 using CustomAIService.Components;
+using Microsoft.Extensions.AI;
+using Microsoft.SemanticKernel.ChatCompletion;
+using Microsoft.SemanticKernel;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Syncfusion.Blazor.Popups;
@@ -19,9 +22,26 @@ public class Program
 
         builder.Services.AddMemoryCache();
         builder.Services.AddSyncfusionBlazor();
+        builder.Services.AddScoped<ErrorDialogService>();
         builder.Services.AddScoped<SfDialogService>();
-        builder.Services.AddSingleton<GroqService>();
-        builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
+        string groqApiKey = "Your API Key"
+    ?? throw new InvalidOperationException("GROQ_API_KEY environment variable is not set.");
+        string groqModel = "Ypur Model Name";
+        var kernelBuilder = Kernel.CreateBuilder().AddOpenAIChatCompletion(
+                modelId: groqModel,
+                endpoint: new Uri("https://api.groq.com/openai/v1"),
+                apiKey: groqApiKey);
+        Kernel kernel = kernelBuilder.Build();
+        IChatClient groqChatClient = kernel.GetRequiredService<IChatCompletionService>().AsChatClient();
+        builder.Services.AddChatClient(groqChatClient);
+        
+        builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
+        {
+            ErrorDialogService errorDialogService = sp.GetRequiredService<ErrorDialogService>();
+            return new MyCustomService(groqChatClient ,errorDialogService );
+        });
+      
+        builder.Services.AddScoped<SfDialogService>();
 
         var app = builder.Build();
 
