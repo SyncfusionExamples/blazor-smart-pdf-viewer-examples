@@ -31,9 +31,9 @@ namespace MauiApp2
             builder.Logging.AddDebug();
 #endif
 
-            string azureOpenAiKey = "C5PujTMQv71JwaQsthRcGNxopR78M5SbftbOQxN2oALxDN0bBSBrJQQJ99BHACYeBjFXJ3w3AAABACOGgpDM";
-            string azureOpenAiEndpoint = "https://openai-165589.openai.azure.com/";
-            string OpenAiModel = "gpt-4o-mini";
+            string azureOpenAiKey = "Your-API-Key";
+            string azureOpenAiEndpoint = "Your-End-Point";
+            string OpenAiModel = "Your-Model-Name";
 
             AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
             IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(OpenAiModel).AsIChatClient();
