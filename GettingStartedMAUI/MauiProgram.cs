@@ -37,9 +37,26 @@ namespace GettingstartedMAUI
 
             builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
             builder.Services.AddSyncfusionBlazor();
-
+#if ANDROID			
+            EnsureModelExistsAsync();
+#endif			
             return builder.Build();
         }
-
+        private static async void EnsureModelExistsAsync()
+		{
+			string[] requiredFiles = { "model.onnx", "vocab.txt" };
+			string targetDir = Path.Combine(FileSystem.AppDataDirectory, "LocalEmbeddingsModel/default");
+			Directory.CreateDirectory(targetDir);
+			foreach (string fileName in requiredFiles)
+			{
+				string targetPath = Path.Combine(targetDir, fileName);
+				if (!File.Exists(targetPath))
+				{
+					using Stream assetStream = await FileSystem.OpenAppPackageFileAsync(fileName);
+					using FileStream fileStream = File.Create(targetPath);
+					await assetStream.CopyToAsync(fileStream);
+				}
+			}
+		}
     }
 }
