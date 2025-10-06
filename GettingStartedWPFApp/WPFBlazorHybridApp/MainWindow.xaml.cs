@@ -15,7 +15,7 @@ using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
-namespace WpfBlazorHybridApp;
+namespace WPFBlazorHybridApp;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
