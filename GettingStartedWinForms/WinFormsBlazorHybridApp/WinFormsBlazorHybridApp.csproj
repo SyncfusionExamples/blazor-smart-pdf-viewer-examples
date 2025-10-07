@@ -13,8 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="9.0.110" />
     <PackageReference Include="Microsoft.Extensions.AI" Version="9.9.1" />
     <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.8.0-preview.1.25412.6" />
-    <PackageReference Include="Syncfusion.Blazor.SfSmartPdfViewer" Version="31.1.17" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="31.1.17" />
+    <PackageReference Include="Syncfusion.Blazor.SfSmartPdfViewer" Version="*" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
   </ItemGroup>
 
 </Project>
