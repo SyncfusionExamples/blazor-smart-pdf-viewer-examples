@@ -1,10 +1,13 @@
 # Getting started with the Smart PDF Viewer
 This section contains samples of Getting started with the Smart PDF Viewer.
 
-Web App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app
-MAUI Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/maui-blazor-app
-WPF Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/wpf-blazor-app
-WinForms Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/winforms-blazor-app
+ - Web App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app
+
+ - MAUI Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/maui-blazor-app
+
+ - WPF Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/wpf-blazor-app
+
+ - WinForms Blazor App: https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/winforms-blazor-app
 
 ## Project pre-requisites
 To run this application, you need Visual Studio 2019 or later versions.
