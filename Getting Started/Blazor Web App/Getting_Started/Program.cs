@@ -35,6 +35,8 @@ public class Program
 
         builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

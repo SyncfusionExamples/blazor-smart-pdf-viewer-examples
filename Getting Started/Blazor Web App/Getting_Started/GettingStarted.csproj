@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="2.3.0-beta.2" />
-    <PackageReference Include="Microsoft.Extensions.AI" Version="9.8.0" />
-    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.8.0-preview.1.25412.6" />
-    <PackageReference Include="Syncfusion.Blazor.AI" Version="*" />
-    <PackageReference Include="Syncfusion.Blazor.SfSmartPdfViewer" Version="*" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.4.1" />
+    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="10.4.1" />
+    <PackageReference Include="Syncfusion.Blazor.SfSmartPdfViewer" Version="33.1.46" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="33.1.46" />
   </ItemGroup>
 
 </Project>
