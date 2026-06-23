@@ -1,12 +1,12 @@
-# Syncfusion® Blazor Smart PDF Viewer Examples
+# Blazor Smart PDF Viewer Examples
 
-This repository contains implementation examples for the **Syncfusion® Blazor Smart PDF Viewer** - an AI-enhanced PDF component that extends conventional PDF viewing capabilities with intelligent document processing. The component integrates advanced AI technologies to deliver Document Summarization with interactive Q&A, Smart Redaction for sensitive content protection, and Smart Fill for automated form completion, providing developers with tools to create more efficient and secure document management solutions.
+This repository contains implementation examples for the [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/ai-powered-blazor-pdf-viewer) - an AI-enhanced PDF component that extends conventional PDF viewing capabilities with intelligent document processing. The component integrates advanced AI technologies to deliver Document Summarization with interactive Q&A, Smart Redaction for sensitive content protection, and Smart Fill for automated form completion, providing developers with tools to create more efficient and secure document management solutions.
 
 ![Syncfusion® Smart PDF Viewer](./images/smart-pdf-viewer.png)
 
 ## Key AI-Powered Features in Smart PDF Viewer
 
-The Syncfusion® Blazor AI-Powered PDF Viewer incorporates three powerful AI-driven features:
+The Blazor AI-Powered PDF Viewer incorporates three powerful AI-driven features:
 - AI Assistance
 - Smart Redaction
 - Smart Fill
